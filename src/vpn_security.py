@@ -4,7 +4,7 @@ This module provides comprehensive security checks for VPN configurations,
 focusing on encryption strength, protocol vulnerabilities, and best practices.
 """
 
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
 import re
 import ssl
 
