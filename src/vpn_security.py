@@ -87,8 +87,8 @@ class VPNSecurityAssessment:
         Returns:
             Dict[str, bool]: Cipher suite security assessment
         """
-        # Define strong cipher suite patterns
-        strong_cipher_pattern = re.compile(r'(ECDHE|DHE).*WITH.*(AES_256|GCM)')
+        # Updated regex for strong cipher suites
+        strong_cipher_pattern = re.compile(r'(ECDHE|DHE).*(?:AES_256|AES256|GCM)')
         
         return {
             'is_secure': bool(strong_cipher_pattern.search(cipher_suite)),
